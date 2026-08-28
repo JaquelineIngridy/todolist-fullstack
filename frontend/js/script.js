@@ -74,6 +74,11 @@ const createSelect = (value) => {
 
     select.value = value;
 
+    select.className = value.replace(' ','-');
+    select.addEventListener('change', ({target}) =>{
+        select.className = target.value.replace(' ', '-');
+    });
+
     return select;
 }
 
@@ -81,8 +86,12 @@ const createSelect = (value) => {
 const createRow = (task) => {
 
     const { id, title, created_at, status } = task;
+    
+    
 
     const tr = createElement("tr");
+
+    tr.className = status.replace(' ', '-');
     const tdTitle = createElement("td", title);
     const tdCreatedAt = createElement("td", formatDate(created_at));
     const tdStatus = createElement("td");

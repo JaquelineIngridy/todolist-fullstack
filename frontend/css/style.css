@@ -102,3 +102,18 @@ select:hover{
 .btn-action:nth-child(2) {
     background-color: rgb(237, 42, 42, 0.9);
 }
+
+tr.pendente, tr.pendente select {
+    background-color: #d8ca09;
+    color: #000000;
+}
+
+tr.em-andamento, tr.em-andamento select {
+    background-color: #06e2ed;
+    color: #000000;
+}
+
+tr.concluida, tr.concluida select {
+    background-color: #33ab21;
+    color: #000000;
+}
